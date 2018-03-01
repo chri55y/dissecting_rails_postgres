@@ -29,6 +29,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
+                                # @blog is equivalent to blogs_path(@blog)
         # format.json { render :show, status: :created, location: @blog }
         # removing json logic per v22
       else
