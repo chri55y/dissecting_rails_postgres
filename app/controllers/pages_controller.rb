@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
   def about
     @posts = Blog.all
+    @skills = Skill.all
   end
 
   def contact
