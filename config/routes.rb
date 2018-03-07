@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :portfolios
   # TO DO: customize so that these 'pages/' isn't repeated throughout
   get 'pages/home'
 
