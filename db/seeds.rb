@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+
+puts "------------------------"
+
+10.times do |blog|
+  Blog.create!(
+          title:  "Blog \##{blog+1}",
+          body:   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+  )
+end
+
+puts "created 10 Blogs"
+
+
+4.times do |skill|
+  Skill.create!(
+           title: "Skill \##{skill+1}",
+           percent_utilization: 20-2*skill
+  )
+end
+
+puts "created 4 Skills"
+
+
