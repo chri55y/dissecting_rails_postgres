@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
-puts "------------------------------------------------"
-puts "-- seed file"
+puts "\n------------------------------------------------"
+puts "-- seed file\n "
+
+log_prefix = "   -> "
+
 
 10.times do |blog|
   Blog.create!(
@@ -17,7 +20,7 @@ puts "-- seed file"
   )
 end
 
-puts "\t->created 10 Blogs"
+puts "#{log_prefix}created 10 Blogs"
 
 
 4.times do |skill|
@@ -27,6 +30,9 @@ puts "\t->created 10 Blogs"
   )
 end
 
-puts "\t->created 4 Skills"
+puts "#{log_prefix}created 4 Skills"
 
 
+
+puts "\n-- end seed file"
+puts "------------------------------------------------\n "
