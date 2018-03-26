@@ -1,3 +1,5 @@
 <h1>Portfolio Items</h1>
 
-<%= @portfolio_items.inspect %>
+<% @portfolio_items.each do |pfolio_item| %>
+  <% puts "id: #{pfolio_item.id} \tsnippet:  '...#{pfolio_item.body[pfolio_item.id, pfolio_item.id]}...'" %>
+<% end %>
