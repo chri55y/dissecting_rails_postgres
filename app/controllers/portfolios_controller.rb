@@ -20,6 +20,10 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
   private
 
   def portfolio_params
