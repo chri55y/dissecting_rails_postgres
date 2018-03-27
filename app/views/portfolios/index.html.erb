@@ -4,5 +4,5 @@
   <p><%= pfolio_item.title %></p>
   <p><%= pfolio_item.subtitle %></p>
   <p><%= pfolio_item.body %></p>
-  <%= image_tag pfolio_item.thumb_image %>
+  <%= image_tag pfolio_item.thumb_image || 'http://demopcr.wpindeed.com/wp-content/plugins/pcr-listing-posts/image/no-thumbnail.png' %>
 <% end %>
