@@ -21,7 +21,7 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-
+    @portfolio_item = Portfolio.first #temp to check that view changes work
   end
 
   private
