@@ -1,5 +1,15 @@
 <h1>Portfolio Items</h1>
 
+<hr>
+
+<h3>Quick Links</h3>
+
+<!-- Create New Item - 2 ways -->
+<a href="portfolios/new">Create New Portfolio Item via href</a>
+
+
+<hr>
+
 <% @portfolio_items.each do |pfolio_item| %>
   <p><%= pfolio_item.title %></p>
   <p><%= pfolio_item.subtitle %></p>
