@@ -13,6 +13,7 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, noticec: 'Your portfolio item has been created' }
+          # skip going to show page (we don't have this implemented yet, and sometimes we'll want to redirect to index anyways)
       else
         format.html { render :new }
       end
