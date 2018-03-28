@@ -3,11 +3,13 @@
 <hr>
 
 <% #= @portfolio_item.inspect %>
+<!-- tried to comment above with %= # , but this caused an error -->
 
 <p><%= @portfolio_item.title %></p>
 <p><%= @portfolio_item.subtitle %></p>
 <p><%= @portfolio_item.body %></p>
-<%= image_tag @portfolio_item.thumb_image || 'http://demopcr.wpindeed.com/wp-content/plugins/pcr-listing-posts/image/no-thumbnail.png' %>
+<%= image_tag @portfolio_item.main_image || 'http://demopcr.wpindeed.com/wp-content/plugins/pcr-listing-posts/image/no-thumbnail.png' %>
 <p class="link">
-  <%= link_to "Edit #{@portfolio_item.title}", edit_portfolio_path(@portfolio_item)  %>
+  <%= link_to "Edit", edit_portfolio_path(@portfolio_item)  %> |
+  <%= link_to "Back", portfolios_path %>
 </p>
