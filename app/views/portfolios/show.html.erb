@@ -2,4 +2,12 @@
 
 <hr>
 
-<%= @portfolio_item.inspect %>
+<% #= @portfolio_item.inspect %>
+
+<p><%= @portfolio_item.title %></p>
+<p><%= @portfolio_item.subtitle %></p>
+<p><%= @portfolio_item.body %></p>
+<%= image_tag @portfolio_item.thumb_image || 'http://demopcr.wpindeed.com/wp-content/plugins/pcr-listing-posts/image/no-thumbnail.png' %>
+<p class="link">
+  <%= link_to "Edit #{@portfolio_item.title}", edit_portfolio_path(@portfolio_item)  %>
+</p>
