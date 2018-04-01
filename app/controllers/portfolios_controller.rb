@@ -40,14 +40,28 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id]) # TO DO - implement before_action
   end
 
+
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id]) # TO DO - implement before_action
+
+    @portfolio_item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolio record was removed.'}
+      # format.json { head :no_content }  # would need for API
+    end
+  end
+
+
+
+
+
   private
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body)
   end
 
-  def destroy
 
-  end
 
 end
