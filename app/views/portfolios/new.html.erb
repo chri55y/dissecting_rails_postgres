@@ -1,0 +1,28 @@
+<h1>Create a new Portfolio Item</h1>
+
+<hr>
+
+<!-- TO DO - create common form helper to be used here and in edit view -->
+
+<%= form_for(@portfolio_item) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+    <!-- displays as "Create Portfolio" button, but does not work yet b/c no create action exists yet -->
+  </div>
+
+<% end %>

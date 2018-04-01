@@ -1,0 +1,23 @@
+<h1>Portfolio Items</h1>
+
+<hr>
+
+<h4>Quick Links</h4>
+  <p class="link">
+    <%= link_to "Create New Portfolio item", new_portfolio_path %>
+  </p>
+<hr>
+
+<% @portfolio_items.each do |pfolio_item| %>
+  <h3><%= link_to pfolio_item.title, portfolio_path(pfolio_item) %></h3>
+  <p><%= pfolio_item.subtitle %></p>
+  <p><%= pfolio_item.body %></p>
+  <%= image_tag pfolio_item.thumb_image || 'http://demopcr.wpindeed.com/wp-content/plugins/pcr-listing-posts/image/no-thumbnail.png' %>
+  <p class="link">
+    <%= link_to "Edit #{pfolio_item.title}", edit_portfolio_path(pfolio_item)  %>
+  </p>
+  <p class="link">
+    <%= link_to "Delete #{pfolio_item.title}", portfolio_path(pfolio_item), method: :delete, data: { confirm: 'Are you sure?'} %>
+  </p>
+  <br />
+<% end %>
