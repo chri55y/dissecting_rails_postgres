@@ -9,7 +9,7 @@
 <hr>
 
 <% @portfolio_items.each do |pfolio_item| %>
-  <h3><%= link_to pfolio_item.title, portfolio_path(pfolio_item) %></h3>
+  <h3><%= link_to pfolio_item.title, portfolio_show_path(pfolio_item) %></h3>
   <p><%= pfolio_item.subtitle %></p>
   <p><%= pfolio_item.body %></p>
   <%= image_tag pfolio_item.thumb_image || 'http://demopcr.wpindeed.com/wp-content/plugins/pcr-listing-posts/image/no-thumbnail.png' %>
